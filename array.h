@@ -160,7 +160,7 @@ struct internal_array_t* internal_array_create( int item_size, void* memctx ) {
     struct internal_array_t* array = (struct internal_array_t*) ARRAY_MALLOC( memctx, sizeof( struct internal_array_t ) );
     array->memctx = memctx;
     array->item_size = item_size;
-    array->capacity = 64;
+    array->capacity = 16;
     array->count = 0;
     array->items = ARRAY_MALLOC( memctx, (size_t) array->capacity * item_size );
     return array;
